@@ -1,0 +1,15 @@
+{
+  "include": [
+    "integration/*.ts",
+    "cypress-visual-regression.ts",
+    "../node_modules/cypress"
+  ],
+  "types": [
+    "cypress"
+  ],
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true
+  }
+}
