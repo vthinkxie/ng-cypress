@@ -1,6 +1,7 @@
 sudo: required
 dist: trusty
 language: node_js
+os: osx
 node_js:
   - '12.13.1'
 addons:
@@ -18,8 +19,5 @@ cache:
     - ~/.cache
 install:
   - npm ci
-before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
 script:
   - npm run cypress-test
