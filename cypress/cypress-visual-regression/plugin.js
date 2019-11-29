@@ -39,6 +39,8 @@ function compareSnapshotsPlugin(args) {
       const imgActual = this;
       console.log(imgActual.width);
       console.log(imgActual.height);
+      const file = fs.readFileSync(path.join(SNAPSHOT_DIRECTORY, 'actual', args.specDirectory, `${args.fileName}-actual.png`));
+      console.log(Buffer.from(file).toString('base64'));
       fs.createReadStream(options.expectedImage).pipe(new PNG()).on('parsed', function () {
         const imgExpected = this;
         console.log(imgExpected.width);
